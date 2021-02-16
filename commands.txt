@@ -1,0 +1,12 @@
+  223  mkdir nowy
+  224  cd nowy
+  225  git init
+  226  touch processes.txt
+  227  ps aux >> processes.txt
+  228  cp processes.txt copy.txt
+  229  mkdir kopia
+  230  mv copy.txt kopia/
+  231  wc -l processes.txt >> processes.txt
+  232  cat >> processes.txt <<< "$(grep -rni /bin processes.txt)"
+  233  history
+  234  history | tail -12 >> commands.txt
